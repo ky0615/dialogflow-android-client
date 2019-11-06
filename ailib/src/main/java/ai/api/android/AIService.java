@@ -18,6 +18,9 @@ package ai.api.android;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
+
+import androidx.core.content.ContextCompat;
 
 import java.util.Collection;
 import java.util.List;
@@ -32,8 +35,6 @@ import ai.api.model.AIResponse;
 import ai.api.model.Entity;
 import ai.api.services.GoogleRecognitionServiceImpl;
 import ai.api.services.SpeaktoitRecognitionServiceImpl;
-import android.content.pm.PackageManager;
-import android.support.v4.content.ContextCompat;
 
 /**
  * Main SDK class for working with API.AI service.

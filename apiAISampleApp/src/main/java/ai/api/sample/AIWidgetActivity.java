@@ -1,12 +1,12 @@
 /**
  * Copyright 2017 Google Inc. All Rights Reserved.
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15,13 +15,15 @@
  */
 
 package ai.api.sample;
+
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import ai.api.android.AIConfiguration;
 import ai.api.model.AIError;
@@ -29,7 +31,7 @@ import ai.api.model.AIResponse;
 import ai.api.ui.AIDialog;
 
 
-public class AIWidgetActivity extends ActionBarActivity {
+public class AIWidgetActivity extends AppCompatActivity {
 
     private AIDialog aiDialog;
 
@@ -48,7 +50,7 @@ public class AIWidgetActivity extends ActionBarActivity {
             public void onResult(final AIResponse aiResponse) {
                 // TODO Process aiResponse
                 aiDialog.close();
-                Toast.makeText(getApplicationContext(), String.format("%s %s","Successful response: ",
+                Toast.makeText(getApplicationContext(), String.format("%s %s", "Successful response: ",
                         aiResponse.getResult().getResolvedQuery()), Toast.LENGTH_SHORT).show();
                 AIWidgetActivity.this.finish();
             }
